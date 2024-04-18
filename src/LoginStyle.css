@@ -1,0 +1,99 @@
+.containerlogin {
+    max-width: 400px;
+    margin: 40px;
+    padding: 20px;
+    border: 1px solid #d2d9ed;
+    border-radius: 5px;
+    background-color: rgb(216 216 216 / 85%);
+    height: 419px ;
+}
+
+#forminp {
+    width: 80%;
+    padding: 10px;
+    /* margin-left: 20px; */
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #050b10;
+    color: #0e203a;
+    cursor: pointer;
+} */
+
+/* .loginbutn:hover {
+    background-color: #ed7818;
+    margin-top:30px;
+} */
+#loginstubutn{
+    /* background-color: #ed7818; */
+    /* margin-top:30px; */
+
+    
+      width: 100%;
+      padding: 10px;
+      border: none;
+      margin-top:3px;
+      border-radius: 5px;
+      background-color: #ff5d09;
+      background-color: #075596;
+      color: #fff;
+      cursor: pointer;
+}
+#loginstubutn:hover {
+
+ background-color: #f11864;
+  /* background-color: #ff5d09;  */
+}
+.headingStudentlogin{
+    margin-top:40px;
+    margin-bottom:45px;
+}
+.success-badge {
+    background-color: #dff0d8; /* Greenish background color */
+  color: #067808; /* Dark green text color */
+    border: 1px solid #d6e9c6; /* Light green border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Increased padding for better spacing */
+    margin-top:5px;
+    margin-bottom: 20px; /* Spacing between badge and other elements */
+    display: flex; /* Use flexbox for better alignment */
+    align-items: center; /* Center content vertically */
+  }
+  
+  .success-badge p {
+    margin: 2px; /* Remove default paragraph margin */
+    color:#067808;
+    flex-grow: 1; /* Expand paragraph; to take remaining space */
+  }
+  
+  .success-badge .icon {
+    margin-right: 10px; /* Add space between icon and text */
+  }
+  
+  .success-badge .text {
+    font-weight: bold; /* Make the text bold */
+  }
+  .error-badge {
+    background-color: #f8d7da; /* Reddish background color */
+    color: #721c24; /* Dark red text color */
+    border: 1px solid #f5c6cb; /* Light red border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding around the text */
+    margin-top:5px;
+    margin-bottom: 20px; /* Spacing between badge and other elements */
+  }
+  
+  .error-badge p {
+    margin: 0; /* Remove default paragraph margin */
+    color:red;
+  }
+  
+  

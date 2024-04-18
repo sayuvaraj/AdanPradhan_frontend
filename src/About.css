@@ -1,0 +1,225 @@
+/* Base styles */
+.about-us-container {
+    padding: 20px;
+}
+
+.about-us-intro {
+    margin-bottom: 20px;
+}
+
+.ratings {
+    margin-top: 20px;
+}
+
+.student-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.student-images img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.videos iframe {
+    margin: 10px;
+}
+
+.partners {
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    display: flex;
+     justify-content: flex-end; 
+    align-items: center; 
+}
+
+.partner-logo {
+    width: 150px; /* Set width of each logo */
+    height: 150px; /* Set height of each logo */
+    margin:5px;
+    animation: moveRightToLeft 5s linear infinite; /* Increase speed by reducing animation duration */
+}
+
+@keyframes moveRightToLeft {
+    0% {
+        transform: translateX(400%);
+    }
+    100% {
+        transform: translateX(-400%);
+    }
+}
+.Our-vision{
+    color:Orange;
+    font-size: 50px;
+    text-align: center;
+}
+.about-intro1{
+    font-style: italic;
+    text-align:center;
+    font-weight: 600;
+    padding:5px;
+    /* align-text:center; */
+}
+/* Review section */
+.review {
+    display: flex;
+    align-items: center; /* Center align review content */
+    margin-bottom: 20px;
+}
+.reviews-para{
+    text-align: center;
+    color:rgb(50, 49, 49);
+    padding:30px;
+    color: rgb(111 107 107);
+   
+}
+.review-heading{
+    color:black;
+    font-size:50px;
+    text-align: center;
+}
+.review-content {
+    display: flex;
+    flex-direction: row; /* Align elements horizontally */
+    align-items: center; /* Center align elements vertically */
+}
+
+.review-text {
+    flex: 1; /* Let review text take up remaining space */
+}
+
+.student-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px; /* Add margin for separation */
+}
+
+.review:nth-child(even) .review-content {
+    flex-direction: row-reverse; /* Reverse the order for even-indexed reviews */
+}
+
+.review:nth-child(even) .student-image {
+    margin-left: 20px; /* Add margin for separation */
+    margin-right: 0; /* Reset right margin */
+}
+
+.review-author {
+    margin-top: 10px; /* Add margin top for separation */
+    text-align: right; /* Align name to the right */
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .student-images img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .student-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .review-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .review:nth-child(even) .review-content {
+        flex-direction: column;
+    }
+
+    .review:nth-child(even) .student-image {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .review-text {
+        margin-left: 0;
+    }
+
+    .review-author {
+        text-align: left;
+    }
+}
+/* Animation keyframes */
+@keyframes buttonScale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.text-anim {
+    animation: bounceIn 5s ease-in-out forwards;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    70% {
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Example text animation */
+.text-animation {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.large-button-container {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.large-button {
+    padding: 20px 50px;
+    font-size: 20px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: buttonScale 2s infinite;
+}
+
+.large-button:hover {
+    background-color: darkorange;
+}
+

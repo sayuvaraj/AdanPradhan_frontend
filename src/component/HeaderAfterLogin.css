@@ -1,0 +1,116 @@
+/* HeaderAfterLogin.css */
+
+/* Navbar styles */
+.navbar-after-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: orange; /* Set navbar background color to orange */
+  }
+  
+  .logo-after-login img {
+    border-radius:15px;
+
+    color:red;
+    height: 50px; /* Adjust height as needed */
+  }
+  
+  .nav-links-after-login {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links-after-login li {
+    margin-right: 20px; /* Adjust spacing between nav items */
+  }
+  
+  .nav-link-after-login {
+    text-decoration: none;
+    /* color:white;
+    color: black;  */
+    color:white;
+  }
+  
+  /* Hamburger menu styles */
+  .menu-toggle-after-login {
+    display: none; /* Hide hamburger menu for larger devices */
+  }
+  
+  .hamburger-after-login {
+    width: 100%;
+    height: 2px;
+    background-color: black; /* Adjust color as needed */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger-after-login::before,
+  .hamburger-after-login::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: black; /* Adjust color as needed */
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger-after-login::before {
+    top: -8px; /* Adjust spacing as needed */
+  }
+  
+  .hamburger-after-login::after {
+    bottom: -8px; /* Adjust spacing as needed */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .nav-links-after-login {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px; /* Adjust top position as needed */
+      left: 0;
+      background-color: orange; /* Adjust background color as needed */
+      width: 100%;
+      padding: 10px 20px;
+      border: 1px solid black; /* Adjust border as needed */
+      z-index: 1000;
+    }
+  
+    .nav-links-after-login.active {
+      display: flex;
+    }
+  
+    .nav-links-after-login li {
+      margin-right: 0;
+      margin-bottom: 10px; /* Adjust spacing between nav items */
+    }
+  
+    .menu-toggle-after-login {
+      display: block; /* Show hamburger menu for smaller devices */
+      cursor: pointer;
+      width: 30px; /* Adjust size as needed */
+      height: 30px; /* Adjust size as needed */
+      position: relative;
+    }
+  
+    .menu-toggle-after-login.active .hamburger-after-login {
+      background-color: transparent;
+    }
+  
+    .menu-toggle-after-login.active .hamburger-after-login::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+  
+    .menu-toggle-after-login.active .hamburger-after-login::after {
+      transform: rotate(-45deg);
+      bottom: 0;
+    }
+  }
+  

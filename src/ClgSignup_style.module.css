@@ -1,0 +1,38 @@
+/* ClgSignup_style.module.css */
+
+.signupContainer {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #d2d9ed;
+  border-radius: 5px;
+  background-color: rgb(216 216 216 / 85%);
+}
+
+.clgForminputs {
+  width: 80%;
+  padding: 10px;
+  color:#910972;
+  margin-bottom: 25px;
+  margin-left:20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.registerButton {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0e631d;
+  color: #fff;
+  cursor: pointer;
+}
+
+.registerButton:hover {
+  background-color: #c36920;
+}
+
+.error {
+  color: red;
+}

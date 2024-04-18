@@ -1,0 +1,202 @@
+.user-bookings-container {
+   
+    margin: 20px auto; /* Center the container horizontally and add vertical margin */
+    width: 80%; /* Limit the width of the container */
+}
+.button-container-user-bookings{
+    display:flex;
+    flex-direction: row-reverse;
+     align-items: flex-end; 
+    margin-top:10px;
+}
+.edit-button{
+    border:none;
+    padding-right: 32px;
+    padding-top: 9px;
+
+    color:white;
+    padding-bottom: 10px;
+    padding-left: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 20px;
+    background-color: rgb(235, 183, 10);
+  
+}
+.delete-button{
+    border:none;
+    padding-right: 32px;
+    padding-top: 9px;
+    color:white;
+    cursor: pointer;
+    padding-bottom: 10px;
+    padding-left: 32px;
+    border-radius: 6px;
+    margin-left: 20px;
+    background-color: red;
+}
+.edit-button:hover{
+    background-color: #163046;
+}
+.delete-button:hover{
+    background-color: #163046;
+}
+.edit-button:disabled,
+.delete-button:disabled {
+    /* color: #CCCCCC; Text color */
+    background-color: #ccc;
+    /* background-color: #ebd9d9; Background color */
+    border-color: #CCCCCC; /* Border color (if applicable) */
+    cursor: not-allowed; /* Change cursor to indicate disabled state */
+}
+
+.booking-box {
+    border: 1px solid #ccc; /* Add border to create a box */
+    padding: 20px; /* Add padding for spacing within the box */
+    margin-bottom: 20px; /* Add bottom margin for spacing between booking boxes */
+    background-color: #f9f9f9; /* Add background color */
+}
+
+.booking-prefix {
+    background-color: #163046; /* Background color for the prefix */
+    color: #fff; /* Text color for the prefix */
+    padding: 10px; /* Add padding */
+    border-radius: 5px 5px 0 0; /* Add border radius to top corners */
+}
+
+.booking-details {
+    padding: 10px; /* Add padding for the booking details */
+}
+
+h2 {
+    color: #163046;
+    text-align: center; /* Center the heading */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.important-update-container {
+    margin: 20px auto; /* Center the container */
+    width: 80%; /* Limit the width of the container */
+}
+
+.scrolling-text {
+    /* background-color: #ffa500;  */
+    background-color: #2a818e;; 
+    /* Background color for scrolling text */
+    color: #fff; /* Text color for scrolling text */
+    padding: 20px; /* Add padding */
+    border-radius: 5px; /* Add border radius */
+    text-align: center; /* Center the text */
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+.scrolling-text h2 {
+    margin-bottom: 10px; /* Add bottom margin to heading */
+    font-size: 24px; /* Adjust font size */
+}
+
+.scrolling-text p {
+    margin: 0; /* Remove default margin */
+    font-size: 18px; /* Adjust font size */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    animation: marquee 20s linear infinite; /* Add animation for scrolling text */
+}
+.No-data{
+    color:orange;
+    /* color:#e82f85; */
+    font-size:40px;
+    margin-top:50px;
+    text-align: center;
+}
+.share-experience-button{
+    border: none;
+    padding-right: 32px;
+    padding-top: 9px;
+    color: white;
+    cursor: pointer;
+    padding-bottom: 10px;
+    padding-left: 32px;
+    border-radius: 6px;
+    margin-left: 20px;
+    background-color: #ff7300;
+}
+
+/* styles.css */
+
+.explore-button {
+    color: green;
+    padding: 5px;
+    border: 2px solid green;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    box-shadow: 0 5px green;
+    animation: popUpAndDown 0.5s ease alternate infinite;
+    outline: none;
+  }
+  
+  .explore-button:hover {
+    background-color: green;
+    color:white;
+    transform: translateY(-3px);
+  }
+  
+  /* .message {
+    color: #600f5c;
+    font-size: 30px;
+    text-align: center;
+  } */
+
+  @keyframes popUpAndDown {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-5px);
+    }
+  }
+  
+/* UserBookingsStyle.css */
+.share-experience-button {
+    /* Add necessary styles for the button */
+    /* You can adjust these styles based on your design */
+    padding: 7px 20px;
+    background-color: #de6415;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    /* Apply scrolling text for mobile screens */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflowing content */
+    text-overflow: scroll; /* Enable scrolling for overflowed content */
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* Improve scrollbar appearance for Edge */
+    scrollbar-width: thin; /* Set the width of scrollbar */
+}
+
+.share-experience-button:hover{
+    background-color: #161877;
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+

@@ -1,0 +1,19 @@
+.contactimage {
+    width: 383px; /* Default width for mobile screens */
+    height: auto;
+    margin-top: 20px;
+    margin-left: 2px;
+    border: 2px solid #f2e1e1;
+  }
+  
+  /* Media query for larger screens */
+  @media only screen and (min-width: 768px) {
+    .contactimage {
+      width: 100%; /* Full width on larger screens */
+      max-width:600px; /* Limit width for larger screens */
+     margin-left: 273px; /* Center horizontally */
+      margin-right: auto; /* Center horizontally */
+    }
+  }
+
+  

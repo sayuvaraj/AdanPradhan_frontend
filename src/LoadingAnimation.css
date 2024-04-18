@@ -1,0 +1,116 @@
+.loading-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    margin-top: 200px;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  
+  .loading-message {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top:40px;
+    margin-right:30px;
+  }
+  
+  .spinning-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .half-circle {
+    position: absolute;
+    width: 33.33%;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .half-circle-left {
+    left: 0;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  }
+  
+  .half-circle-middle {
+    left: 33.33%;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  }
+  
+  .half-circle-right {
+    left: 66.66%;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  }
+  
+  .half-circle-left,
+  .half-circle-middle,
+  .half-circle-right {
+    background-color: transparent;
+  }
+  
+  .half-circle-left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.33%;
+    height: 100px;
+    background-color: #3498db; /* Change this to the desired color */
+    transform-origin: 100% 50%;
+    animation: spin-left 2s linear infinite;
+  }
+  
+  .half-circle-middle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.33%;
+    height: 100px;
+    background-color: #e74c3c; /* Change this to the desired color */
+    transform-origin: 0% 50%;
+    animation: spin-middle 2s linear infinite;
+  }
+  
+  .half-circle-right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.33%;
+    height: 100px;
+    background-color: #2ecc71; /* Change this to the desired color */
+    transform-origin: 0% 50%;
+    animation: spin-right 2s linear infinite;
+  }
+  
+  @keyframes spin-left {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(120deg);
+    }
+  }
+  
+  @keyframes spin-middle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(120deg);
+    }
+  }
+  
+  @keyframes spin-right {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(120deg);
+    }
+  }
+  

@@ -1,0 +1,166 @@
+.Faqs {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.faq-list {
+  max-width: 1011px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-question {
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #cbc9c9;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  padding: 10px;
+  background-color: #163046;
+  color: white;
+  text-align: left;
+}
+
+.faq-answer::before {
+  content: "Answer: ";
+  font-weight: bold;
+}
+
+.fa-plus,
+.fa-minus {
+  margin-left: auto;
+  padding-right: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-minus {
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 768px) {
+  .faq-question {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .faq-question {
+    padding-left: 5px;
+  }
+}
+.loading-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinning-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.half-circle {
+  position: absolute;
+  width: 33.33%;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.half-circle-left {
+  left: 0;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.half-circle-middle {
+  left: 33.33%;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.half-circle-right {
+  left: 66.66%;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.half-circle-left,
+.half-circle-middle,
+.half-circle-right {
+  background-color: transparent;
+}
+
+.half-circle-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33.33%;
+  height: 100px;
+  background-color: #3498db; /* Change this to the desired color */
+  transform-origin: 100% 50%;
+  animation: spin-left 2s linear infinite;
+}
+
+.half-circle-middle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33.33%;
+  height: 100px;
+  background-color: #e74c3c; /* Change this to the desired color */
+  transform-origin: 0% 50%;
+  animation: spin-middle 2s linear infinite;
+}
+
+.half-circle-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33.33%;
+  height: 100px;
+  background-color: #2ecc71; /* Change this to the desired color */
+  transform-origin: 0% 50%;
+  animation: spin-right 2s linear infinite;
+}
+
+@keyframes spin-left {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(120deg);
+  }
+}
+
+@keyframes spin-middle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(120deg);
+  }
+}
+
+@keyframes spin-right {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(120deg);
+  }
+}

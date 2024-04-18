@@ -1,0 +1,194 @@
+/* Home_style.css */
+
+/* Header */
+header {
+  background-color: #163046;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Main sections */
+section {
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Image section */
+.columnsize1 img {
+  width: 98%; /* Adjust image width for smaller screens */
+  height: auto;
+  margin-bottom: 10px; /* Add margin below image for smaller screens */
+}
+
+/* Why Aadan Pradhan section */
+.containerwhyadan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.whyadan1 {
+  width: 75%; /* Adjust width to full width for smaller screens */
+  max-width: 70%; /* Set maximum width for larger screens */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.whyadan1 img {
+  width: 100%; /* Adjust image width for smaller screens */
+  height: auto;
+}
+
+.whyadan2 {
+  width: 100%;
+  max-width: 80%; /* Set maximum width for larger screens */
+  height: auto;
+  color: white;
+  padding: 40px;
+  margin-top: 10px; /* Adjust margin-top for smaller screens */
+}
+
+#description {
+  margin-top: 20px; /* Add margin-top for smaller screens */
+  padding: 40px;
+  margin-left:10px;
+  background-color: rgb(13, 43, 15);
+  color: white;
+}
+
+/* Quick Read section */
+#para {
+  font-size: 20px;
+  text-align: justify;
+}
+
+/* Footer */
+footer {
+  background-color: #163046;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .containerwhyadan {
+    flex-direction: row;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+  }
+
+
+
+  .home-text-anim {
+    animation: bounceIn 3s ease-in-out forwards;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    70% {
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+  .whyadan1,
+  .whyadan2 {
+    width: calc(50% - 5px); /* Adjust width for larger screens */
+    max-width: none;
+    height: auto;
+    margin-left:30px ;
+    margin-bottom:5px;
+  }
+
+   .whyadan1 img {
+    width: 140%; 
+    width: 116%;
+    height: auto;
+    margin-top: 30px;
+    /* margin-bottom:10px; */
+  }
+
+  .whyadan2 {
+    width:50%;
+    height:40px;
+    padding:5px;
+    margin-left: 10px; /* Add margin between image and text for larger screens */
+  }
+}
+
+.welcome-section {
+  text-align: center;
+  padding: 50px;
+  background-color: #f5f5f5;
+}
+
+.welcome-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.caption {
+  margin-top: 30px;
+}
+
+.caption h2 {
+  font-size: 48px;
+  color: #ff9900;
+}
+
+.caption p {
+  font-size: 18px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .welcome-section {
+    padding: 30px;
+  }
+
+  .welcome-section h1 {
+    font-size: 28px;
+  }
+
+  .caption h2 {
+    font-size: 36px;
+  }
+
+  .caption p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .welcome-section h1 {
+    font-size: 24px;
+  }
+
+  .caption h2 {
+    font-size: 28px;
+  }
+
+  .caption p {
+    font-size: 14px;
+  }
+}
+

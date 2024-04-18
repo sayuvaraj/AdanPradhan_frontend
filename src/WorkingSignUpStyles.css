@@ -1,0 +1,49 @@
+/* styles.css */
+
+.signup-work-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Adjust this value based on your requirement */
+  }
+  
+  .signup-work-content {
+    text-align: center;
+  }
+  
+  /* .signup-work-tab-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  } */
+  
+  .signup-work-tab-buttons button {
+    margin-right: 10px;
+    
+  }
+
+
+
+  
+  
+  
+
+  .signup-work-tab-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .signup-work-tab-buttons button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    background-color: orange;
+    cursor: pointer;
+  }
+  
+  .signup-work-tab-buttons button.active {
+    background-color: #007bff;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+  }

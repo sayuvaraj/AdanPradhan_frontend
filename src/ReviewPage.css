@@ -1,0 +1,134 @@
+/* ReviewPage.css */
+
+.review-container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    transition: box-shadow 0.3s ease;
+}
+
+.review-container:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Change box shadow on hover */
+}
+
+.review-header-review {
+    margin-bottom: 20px;
+    font-size: 24px; /* Increase font size */
+    color: #333; /* Change font color */
+}
+
+.congratulations {
+    margin-bottom: 20px;
+}
+
+.congratulations p {
+    margin-bottom: 10px;
+}
+
+.form-group-review {
+    margin-bottom: 20px;
+    text-align: left; /* Align form items to the left */
+}
+
+.form-label-review {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-textarea-review,
+.form-input-review {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-textarea-review:focus,
+.form-input-review:focus {
+    border-color: #007bff;
+}
+
+.testimonials {
+    font-style: oblique;
+    color: orange;
+}
+
+.message-review {
+    color: #b9187c; /* Change message color */
+    position: absolute;
+    top: calc(100% + 20px); /* Adjust message position */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px; /* Adjust padding */
+    background-color: rgba(161, 161, 161, 0.8);
+    border-radius: 5px;
+}
+
+.success-message-review {
+    position: absolute;
+    top: calc(50% - 50px); /* Center the message vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #b9187c;
+}
+
+.submit-btn-review,
+.ask-later-btn {
+    padding: 10px 20px;
+    margin-right: 10px; /* Add margin between buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn-review:hover,
+.ask-later-btn:hover {
+    background-color: #0056b3;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center align buttons */
+    margin-top: 20px;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.rating label {
+    margin-right: 10px; /* Add space between rating stars */
+    cursor: pointer;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating .star {
+    font-size: 24px; /* Increase star size */
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.rating .star:hover,
+.rating .star:hover ~ .star {
+    color: #fdd835; /* Change star color on hover */
+}
+
+@media (min-width: 768px) {
+    .ask-later-btn {
+        display: inline-block;
+        margin-left: 10px; /* Adjust margin */
+    }
+}

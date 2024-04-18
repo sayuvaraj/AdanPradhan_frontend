@@ -1,0 +1,190 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.course-page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.course-heading{
+    
+        font-size: 42px; /* Adjust font size as needed */
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif, sans-serif; /* Use Impact font family */
+        color: #3f0d4b; /* Use a bright color to catch attention */
+        text-align: center; /* Align heading to center */
+        margin-top: 0; /* Remove default margin */
+        margin-bottom: 20px; /* Add some bottom margin for spacing */
+        /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); Add a subtle text shadow for depth */
+    
+}
+#coursepage-header{
+    background-color:rgb(17, 168, 173);
+    background-color: rgb(255 240 243);
+    /* color: white; */
+    padding: 10px 0;
+    text-align: center;
+}
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.rating span {
+    margin-right: 5px;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.video,
+.what-you-learn {
+    flex: 1 1 50%; /* Change to occupy half width for larger screens */
+}
+
+.video iframe {
+    width: 100%;
+}
+
+.what-you-learn ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.what-you-learn li {
+    margin-bottom: 5px;
+}
+
+.about-reviews {
+    margin-bottom: 20px;
+}
+
+.section-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.section-buttons button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.section-buttons button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.about,
+.reviews {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.about h2,
+.reviews h2 {
+    margin-top: 0;
+}
+
+.review {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.review:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.person-symbol {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.review-text {
+    font-weight: bold;
+}
+
+/* Add tick mark symbol to list items */
+.what-you-learn li::before {
+    
+    margin-right: 5px;
+}
+
+/* Style for the review section */
+.reviews {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.review {
+    margin-bottom: 20px;
+}
+
+.review-header1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating span {
+    margin-right: 5px;
+}
+
+
+.video {
+    flex: 1 1 60%; /* Change to occupy 65% width for larger screens */
+}
+
+.what-you-learn {
+    flex: 1 1 40%; /* Change to occupy 35% width for smaller screens */
+}
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    .video,
+    .what-you-learn {
+        flex: 1 1 100%;
+    }
+
+    .section-buttons button {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+}

@@ -1,0 +1,119 @@
+/* College_demo_style.css */
+
+/* Form Container */
+.form-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Form */
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Form Header */
+.form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Form Group */
+.college-demo-form-group {
+  margin-bottom: 20px;
+}
+
+/* Label */
+.college-demo-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Input and Textarea */
+.college-demo-input,
+.college-demo-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Submit Button */
+.collegedemobtn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.collegedemobtn:hover {
+  background-color: #0056b3;
+}
+
+/* ClgHeader */
+.clg-header {
+  margin-bottom: 20px;
+}
+
+/* College_demo_style.css */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+.workshop-inspiration-section {
+  animation: fadeIn 5s ease-in-out; /* Apply fade-in animation */
+}
+
+
+.workshop-inspiration-section {
+  animation:  slideInRight 5s ease-in-out; /* Apply fade-in animation */
+}
+
+.college-demo {
+  animation: slideInUp 1s ease-in-out; /* Apply slide-in-up animation */
+}
+
+.college-demo-inspire-section{
+  color:Orange;
+  margin-top:20px;
+  margin-bottom:20px;
+  text-align: center;
+}
+.college-demo-inspire-para{
+  color: rgb(9, 65, 129);
+  text-align: center;
+}
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

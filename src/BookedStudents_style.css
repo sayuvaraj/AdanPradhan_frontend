@@ -1,0 +1,106 @@
+/* BookedStudents_style.css */
+
+/* Main container */
+.today-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  color: #333;
+}
+
+/* Date row */
+.date-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Date item */
+.date-item {
+  flex: 0 0 calc(33.33% - 20px);
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.date-item.selected {
+  background-color:#fff922; 
+  
+}
+
+/* Details container */
+.details-container {
+  margin-top: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling for small screens */
+}
+
+/* Course section */
+.course {
+  margin-bottom: 30px;
+}
+
+/* Course heading */
+.course h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+/* Table styling */
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bookings-table th,
+.bookings-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.selected-data{
+  font-size:20px;
+  color:#9b1475;
+  text-align: center;
+}
+.bookings-table th {
+  background-color: #1b7427;
+  
+  
+  color:white;
+ 
+}
+
+/* Button styling */
+.btn {
+  padding: 10px 20px;
+  background-color: #162d47;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+.no-bookings-message{
+  text-align: center;
+  margin-top: 50px;
+  color:#1050ba;
+  font-size: 30px;
+
+}
