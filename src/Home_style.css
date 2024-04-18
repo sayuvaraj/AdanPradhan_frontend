@@ -17,8 +17,8 @@ section {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  /* padding-right: 15px; */
+  /* padding-left: 15px; */
 }
 
 /* Image section */
@@ -56,11 +56,11 @@ section {
   padding: 40px;
   margin-top: 10px; /* Adjust margin-top for smaller screens */
 }
-
+  
 #description {
   margin-top: 20px; /* Add margin-top for smaller screens */
   padding: 40px;
-  margin-left:10px;
+  margin-left:0px;
   background-color: rgb(13, 43, 15);
   color: white;
 }

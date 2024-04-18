@@ -12,7 +12,7 @@ const RunningColleges = () => {
   useEffect(() => {
     const fetchColleges = async () => {
       try {
-        const response = await fetch('http://localhost:3003/api/clg/getYourworkshops', {
+        const response = await fetch('https://adan-pradhan-backend.vercel.app/api/clg/getYourworkshops', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
