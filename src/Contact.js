@@ -13,7 +13,8 @@ const Contact = () => {
     name: '',
     email: '',
     address: '',
-    message: ''
+    message: '',
+    category: '' // Add category field to formData
   });
   const [isMessageSent, setIsMessageSent] = useState(false); // State to track if message is sent
 
@@ -45,7 +46,8 @@ const Contact = () => {
           name: '',
           email: '',
           address: '',
-          message: ''
+          message: '',
+          category: '' // Reset category field
         });
       } else {
         // If there's an error sending the message, display error message
@@ -65,7 +67,6 @@ const Contact = () => {
       </div>
       <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}><WeareHere/><span style={{fontSize:'50px',color:'orange'}}>We are here</span>  </div>
       <div className='contact-text-para'>
-           {/* <h2 className='contact-we-are-here'> We are here </h2> */}
         <p id="contact-text">"We'd love to hear from you! Whether you have a question about our services, need assistance, or just want to say hello, feel free to reach out to us using the form below or contact information provided."</p>
       </div>
       <div className="contact-container">
@@ -84,7 +85,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="large-box">
-          <h2 className="large-heading">Get in touch</h2>
+          <h2 className="large-heading">Voice Your <span style={{color:'orange'}}>Issues</span></h2>
           <p id="contact-text">"We'd love to hear from you! Whether you have a question about our services, need assistance, or just want to say hello !!!"</p>
           <form onSubmit={handleSubmit}>
             <div className="contact-section">
@@ -107,29 +108,31 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+            <div className="form-group">
+              <label htmlFor="category">Category</label>
+              <select id="category" className="select-field" value={formData.category} onChange={handleChange}>
+                <option value="">Select Category</option>
+                <option value="Login/Register">Login/Register</option>
+                <option value="Slot Bookings">Slot Bookings</option>
+                <option value="Cancellation">Cancellation</option>
+                <option value="Profile Issues">Profile Issues</option>
+                <option value="Rating and Reviews">Rating and Reviews</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
             {isMessageSent && (
-      <Lottie animationData={SamplePic} className="animation" style={{width:'auto',height:'200px',marginBottom:'10px'}} loop={false} onComplete={() => setIsMessageSent(false)} />
-    )}
+              <Lottie animationData={SamplePic} className="animation" style={{width:'auto',height:'200px',marginBottom:'10px'}} loop={false} onComplete={() => setIsMessageSent(false)} />
+            )}
             <div className="form-group">
               <label htmlFor="message">Message</label>
               <textarea id="message" className="textarea-field" placeholder="Type your message here" value={formData.message} onChange={handleChange} required></textarea>
             </div>
-            <div style={{marginBottom:'2px'}}>
-         
-          </div>
+            <div style={{marginBottom:'2px'}}></div>
             <button type="submit" className="btn-send">Send Message</button>
           </form>
-          <div>
-          {/* {isMessageSent && (
-      <Lottie animationData={SamplePic} className="animation" style={{width:'auto',height:'200px',marginBottom:'280px'}} loop={false} onComplete={() => setIsMessageSent(false)} />
-    )} */}
-          </div>
-          
         </div>
       </div>
-      <section>
-        <Footer />
-      </section>
+      <Footer />
     </>
   );
 }

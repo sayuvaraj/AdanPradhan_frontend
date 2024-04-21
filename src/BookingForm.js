@@ -24,7 +24,8 @@ const BookingForm = () => {
         // Fetch user details using the token
         const fetchUserDetails = async () => {
             try {
-                const response = await fetch(`https://adan-pradhan-backend.vercel.app/api/user/${token}`, {
+                // const response = await fetch(`https://adan-pradhan-backend.vercel.app/api/user/${token}`, {
+                    const response = await fetch(`https://adan-pradhan-backend.vercel.app/api/user/${token}`, {
                     headers: {
                         'token': localStorage.getItem('token'),
                         // 'token': `${localStorage.getItem('token')}`
@@ -120,6 +121,9 @@ const BookingForm = () => {
     return (
         <>
             <HeaderAfterLogin />
+            <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="orange" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,181.3C480,160,600,96,720,90.7C840,85,960,139,1080,154.7C1200,171,1320,149,1380,138.7L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+            </div>
             <div className="booking-inspiration">
                 <h2 className='unlock-text'>Unlock <span style={{ color: 'orange' }}>Your Potential</span></h2>
                 <p>Join us and embark on a journey towards success. Book your slot now and take the first step towards a brighter future!</p>

@@ -21,7 +21,8 @@ const Form = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://adan-pradhan-backend.vercel.app/api/clg/College_data", {
+       const response = await fetch("https://adan-pradhan-backend.vercel.app/api/clg/College_data", {
+        // const response = await fetch("https://adan-pradhan-backend.vercel.app/api/clg/College_data", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -58,7 +59,8 @@ const Form = () => {
   useEffect(() => {
     const fetchCollegeDetails = async () => {
       try {
-        const response = await fetch("https://adan-pradhan-backend.vercel.app/api/clg/clgName", {
+         const response = await fetch("https://adan-pradhan-backend.vercel.app/api/clg/clgName", {
+         // const response = await fetch("https://adan-pradhan-backend.vercel.app/api/clg/clgName", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -93,6 +95,10 @@ const Form = () => {
         <ClgHeader />
       </section>
       {/* <ThreeColors/> */}
+      <div style={{width:'auto',height:'200px'}}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000b76" fill-opacity="1" d="M0,32L48,53.3C96,75,192,117,288,117.3C384,117,480,75,576,85.3C672,96,768,160,864,160C960,160,1056,96,1152,101.3C1248,107,1344,181,1392,218.7L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+     
+      </div>
       <div className="workshop-inspiration-section">
         <h2 className="college-demo-inspire-section">
           <span style={{ color: "orange", fontSize: "40px" }}> Discover ,</span>
@@ -178,7 +184,9 @@ const Form = () => {
           <button type="submit" className="collegedemobtn">
             Submit
           </button>
+          
         </form>
+        
       </div>
       <Footer />
     </>

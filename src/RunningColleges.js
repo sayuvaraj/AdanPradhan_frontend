@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import ClgHeader from './component/ClgHeader';
 import 'animate.css'; 
 import Footer from './Footer';
+import Deletelogo from './images/Deletelogo2.png';
+
 import './RunningCollegeStyle.css'; // Import CSS file
 import LoadingAnimation from './LoadingAnimation'; // Import LoadingAnimation component
 
@@ -34,7 +36,7 @@ const RunningColleges = () => {
   const handleStart = async (collegeId, collegeName, courseOffered) => {
     try {
       console.log(collegeId);
-      const response = await fetch(`http://localhost:3003/api/clg/updateStatus/${collegeId}`, {
+      const response = await fetch(`https://adan-pradhan-backend.vercel.app/api/clg/updateStatus/${collegeId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -60,7 +62,7 @@ const RunningColleges = () => {
   const handleStop = async (collegeId, collegeName, courseOffered) => {
     try {
       console.log(collegeId);
-      const response = await fetch(`http://localhost:3003/api/clg/updateStatus/${collegeId}`, {
+      const response = await fetch(`https://adan-pradhan-backend.vercel.app/api/clg/updateStatus/${collegeId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -83,25 +85,25 @@ const RunningColleges = () => {
     }
   };
 
-  const handleDelete = async (collegeId, collegeName, courseOffered) => {
-    try {
-      const response = await fetch(`http://localhost:3003/api/clg/deleteWorkshop/${collegeId}`, {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      if (response.ok) {
-        // Remove the deleted workshop from the colleges state
-        const updatedColleges = colleges.filter(college => college.college_id !== collegeId);
-        setColleges(updatedColleges);
-      } else {
-        console.error('Failed to delete workshop');
-      }
-    } catch (error) {
-      console.error('Error deleting workshop:', error);
-    }
-  };
+  // const handleDelete = async (collegeId, collegeName, courseOffered) => {
+  //   try {
+  //     const response = await fetch(`https://adan-pradhan-backend.vercel.app/api/clg/deleteWorkshop/${collegeId}`, {
+  //       method: 'DELETE',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       }
+  //     });
+  //     if (response.ok) {
+  //       // Remove the deleted workshop from the colleges state
+  //       const updatedColleges = colleges.filter(college => college.college_id !== collegeId);
+  //       setColleges(updatedColleges);
+  //     } else {
+  //       console.error('Failed to delete workshop');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error deleting workshop:', error);
+  //   }
+  // };
 
   return (
     <>
@@ -142,10 +144,11 @@ const RunningColleges = () => {
                       </button>
                       <button
                         id="delete-btn"
-                        onClick={() => handleDelete(college.college_id, college.collegeName, college.courseOffered)}
+                        // onClick={() => handleDelete(college.college_id, college.collegeName, college.courseOffered)}
                       >
-                        Delete
+                       <img   src={Deletelogo} width='28px' height='28px' alt='Delete btn '/>
                       </button>
+                      {/* <img   src={Deletelogo} width='28px' height='28px' alt='Delete btn '/> */}
                     </td>
                   </tr>
                 ))}

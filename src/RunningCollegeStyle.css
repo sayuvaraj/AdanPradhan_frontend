@@ -38,10 +38,10 @@
   color: white;
 }
 
-#delete-btn {
+/* #delete-btn {
   background-color: red;
   color: white;
-}
+} */
 
 /* Disable Start button when workshop is running */
 #start-btn[disabled] {
@@ -84,7 +84,7 @@
   #start-btn,
   #stop-btn,
   #delete-btn {
-    padding: 4px 8px;
+    padding: 2px 4px;
     margin-right: 3px;
   }
 }
@@ -93,4 +93,16 @@
 #stop-btn:not([disabled]):hover,
 #delete-btn:not([disabled]):hover {
   background-color: rgba(17, 17, 131, 0.856);
+}
+#delete-btn {
+  padding: 4px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  margin-right: 5px;
+  vertical-align: middle; /* Add vertical alignment */
+}
+
+#delete-btn img {
+  vertical-align: middle; /* Add vertical alignment for the image */
 }

@@ -11,7 +11,7 @@ const ThankBooking = () => {
     const timeout = setTimeout(() => {
       // Navigate to the desired page (e.g., '/rateuspage') after 3 seconds
       navigate('/rateuspage');
-    }, 4000);
+    },2500);
 
     // Clear the timeout when the component unmounts
     return () => clearTimeout(timeout);

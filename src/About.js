@@ -75,7 +75,8 @@ const AboutUs = () => {
                 </div>
                 <div className="review">
                     <div className="review-content">
-                        <img src="https://img.freepik.com/free-photo/front-view-female-student-black-jacket-wearing-backpack-holding-files-with-copybooks-thinking-blue-wall-college-university-lessons_140725-43340.jpg" alt="Student 1" className="student-image" />
+                    <img src="https://img.freepik.com/premium-photo/teenager-student-girl-yellow-pointing-finger-side_1368-40175.jpg" alt="Student 1" className="student-image" />
+                       
                         <div className="review-text">
                           <strong>  <p>"Adanpradhan has been instrumental in helping me understand complex topics in a simple and practical manner. Highly recommended!" Adanpradhan has been an invaluable resource in my academic journey. As a student grappling with complex concepts, I found the platform's innovative workshops to be incredibly beneficial. The hands-on approach to learning allowed me to gain practical knowledge and a deeper understanding of the subjects I was studying.</p>
                           </strong>

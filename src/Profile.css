@@ -47,10 +47,6 @@
 
 .profile-button {
   padding: 10px 20px;
-  margin-top: 40px;
-  margin-left:50px;
-  margin-bottom:40px;
-  background-color: #0e7c1c;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -64,13 +60,14 @@
 
 .profile-cancel-button {
 
-  margin-top: 20px;
-    width: 90px;
+  
     background-color: #cd0b1e;
-    margin-right: 10px;
+   
  
 }
-
+.profile-submit-button-style{
+  background-color: #0e7c1c;
+}
 .profile-details {
   margin-bottom: 20px;
   animation: slideIn 0.5s ease; /* Slide in animation */
@@ -81,16 +78,9 @@
 }
 
 .profile-edit-button {
-  align-self: flex-end; 
-  width:185px;
   
-  padding: 11px 10px;
-    margin-top: 45px;
-    margin-left: 170px;
     background-color: #0e7c1c;
     color: #fff;
-    border: none;
-    border-radius: 3px;
     cursor: pointer;
 }
 

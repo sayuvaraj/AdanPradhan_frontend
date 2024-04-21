@@ -28,7 +28,7 @@ const Login = () => {
             if (response.ok) {
                 clgLogin(data.clg_token);
                 // localStorage.setItem('clg_token', data.clg_token);
-                navigate('/runningworkshops');
+                navigate('/collegestartup');
                 console.log("data is valid,  college login  succesfully  ")
             } else {
                 setError(data.message || 'Login failed');

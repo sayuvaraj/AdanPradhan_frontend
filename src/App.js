@@ -38,6 +38,7 @@ import AnimationCountDown from "./AnimationCountDown";
 import ThankBooking from "./ThankBooking";
 import CoursePage from "./CoursePage";
 import Thankworkshop from "./Thankworkshop";
+import CollegeStartUp from "./CollegeStartUp";
 function App() {
   const { isAuthenticated, isclgAuthenticated } = useAuth();
   return (
@@ -114,6 +115,7 @@ function App() {
               </Route>
               <Route path="/addworkshops" element={<College_demo />}></Route>
               <Route path="/thankworkshop" element={<Thankworkshop/>}></Route>
+              <Route path="/collegestartup" element={<CollegeStartUp/>}></Route>
               <Route
                 path="/studentbookings"
                 element={<BookedStudents />}

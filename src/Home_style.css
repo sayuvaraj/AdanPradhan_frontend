@@ -15,15 +15,15 @@ section {
 
 .container {
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
+  /* margin-right: auto;
+  margin-left: auto; */
   /* padding-right: 15px; */
   /* padding-left: 15px; */
 }
 
 /* Image section */
 .columnsize1 img {
-  width: 98%; /* Adjust image width for smaller screens */
+  width: 100%; /* Adjust image width for smaller screens */
   height: auto;
   margin-bottom: 10px; /* Add margin below image for smaller screens */
 }
@@ -118,8 +118,9 @@ footer {
 
    .whyadan1 img {
     width: 140%; 
-    width: 116%;
+    width: 104%;
     height: auto;
+
     margin-top: 30px;
     /* margin-bottom:10px; */
   }
@@ -189,6 +190,45 @@ footer {
 
   .caption p {
     font-size: 14px;
+  }
+}
+
+.partners {
+  
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  display: flex;
+   justify-content: flex-end; 
+  align-items: center; 
+}
+
+.partner-logo {
+  width: 150px; /* Set width of each logo */
+  height: 150px; /* Set height of each logo */
+  margin:5px;
+  animation: moveRightToLeft 5s linear infinite; /* Increase speed by reducing animation duration */
+}
+
+@keyframes moveRightToLeft {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+
+  
+}
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  99% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
   }
 }
 

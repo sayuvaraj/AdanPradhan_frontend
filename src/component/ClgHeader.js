@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../images/collegelogowithtwo.png';
 import './ClgHeader.css'; // Import CSS file for styling
 
 const HeaderAfterLogin = () => {
@@ -14,7 +15,7 @@ const HeaderAfterLogin = () => {
   return (
     <nav className="navbar-after-login">
       <div className="logo-after-login">
-        <img src="logo.png" alt="Logo" />
+      <img src={logo} alt="Logo" />
       </div>
       <ul className={`nav-links-after-login ${isMenuOpen ? 'active' : ''}`}>
         <li>

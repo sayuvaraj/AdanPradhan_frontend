@@ -93,7 +93,7 @@ const averageRating = totalRating / reviewspage.length;
         {displayAbout ? (
           <section className="about">
             <h2>About</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porta sapien eu felis viverra hendrerit. Quisque hendrerit, nulla nec pulvinar accumsan, felis purus hendrerit ligula, sit amet gravida eros metus sit amet urna.</p>
+            <p style={{color:'white',backgroundColor:'olive'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porta sapien eu felis viverra hendrerit. Quisque hendrerit, nulla nec pulvinar accumsan, felis purus hendrerit ligula, sit amet gravida eros metus sit amet urna.</p>
           </section>
         ) : (
           <section className="reviews">

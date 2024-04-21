@@ -20,13 +20,10 @@ const AnimationCountDown = () => {
     };
 
     return (
-        <div>
-            <Lottie style={{width:'auto' ,height:'800px'}}
-                animationData={CountDown}
-                loop={false}
-                onComplete={onAnimationComplete} // Call onAnimationComplete after animation completes
-            />
-        </div>
+       
+           <div style={{display:'flex',justifyContent:'center',alignItems:'center',marginTop:'70px'}}>
+           <Lottie animationData={CountDown} loop={false} style={{ width: '500px', height: '400px' }}  onComplete={onAnimationComplete}  />
+         </div>
     );
 };
 

@@ -44,7 +44,7 @@ function Footer() {
                 <FontAwesomeIcon icon={faGithub} size="3x" />
                 <p>GitHub</p>
               </a>
-              <a href="https://github.com/sayuvaraj/adanproject.git">
+              <a href="https://buy.stripe.com/test_9AQ6qJ5uz4v6b3q6op">
                 <FontAwesomeIcon icon={faInstagram} size="3x" />
                 <p>Instagram</p>
               </a>

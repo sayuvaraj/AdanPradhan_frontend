@@ -51,8 +51,10 @@ const ReviewPage = () => {
         e.preventDefault();
         try {
             // Fetch booking details to get college and course name
-            const bookingResponse = await fetch(`https://adan-pradhan-backend.vercel.app/api/user/bookings/getdetails/${bookingId}`, {
-                method: 'GET',
+           const bookingResponse = await fetch(`https://adan-pradhan-backend.vercel.app/api/user/bookings/getdetails/${bookingId}`, {
+           //     const bookingResponse = await fetch(`https://adan-pradhan-backend.vercel.app/api/user/bookings/getdetails/${bookingId}`, {
+                  
+            method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
                     'token': token
@@ -70,7 +72,9 @@ const ReviewPage = () => {
 
             // Send feedback data to the backend API along with the bookingId
             const response = await fetch('https://adan-pradhan-backend.vercel.app/api/user/course-reviews', {
-                method: 'POST',
+           // const response = await fetch('https://adan-pradhan-backend.vercel.app/api/user/course-reviews', {
+               
+              method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'token': token
@@ -121,7 +125,10 @@ const ReviewPage = () => {
         <>
             <HeaderAfterLogin />
             <div className="review-container animated fadeIn">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="orangered" fill-opacity="1" d="M0,64L40,69.3C80,75,160,85,240,112C320,139,400,181,480,181.3C560,181,640,139,720,144C800,149,880,203,960,213.3C1040,224,1120,192,1200,197.3C1280,203,1360,245,1400,266.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg> 
                 <div style={{display:'flex'}}><div><ReviewAnim/></div>   </div>
+                {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,0L1440,192L1440,0L0,0Z"></path></svg> */}
                 <h1 style={{textAlign:'center'}} className="review-header-review">Share Your<span style={{ color: 'orange',textAlign:'center' }}> Experience</span></h1>
                 <div className="congratulations animated fadeInLeft">
                     <p style={{ color: 'grey', fontStyle: 'italic' }}>Congratulations! You've successfully booked with us.</p>
@@ -186,6 +193,7 @@ const ReviewPage = () => {
                         <ThankRespon />
                     </div>
                 )} */}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="3 6 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,96L60,128C120,160,240,224,360,261.3C480,299,600,309,720,304C840,299,960,277,1080,266.7C1200,256,1320,256,1380,256L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
             </div>
             <section style={{marginTop:'50px'}}>
                 <Footer/>

@@ -8,23 +8,21 @@
 .college-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between; /* Adjust spacing between cards */
   margin-bottom: 20px;
 }
 
 .college-card {
-  position: relative; /* Add position relative to parent */
-  width: calc(33.33% - 10px); /* Adjust width to have three cards per row with margin between them */
+  width: calc(50% - 10px); /* Adjust width to have two cards per row with margin between them */
   max-width: 300px; /* Set maximum width for each card */
-  border: 1px solid #ccc;
   padding: 20px;
   border-radius: 5%;
-  border-color: rgb(42, 139, 13);
   margin-bottom: 20px; /* Add margin bottom to separate cards */
   transition: transform 0.3s ease; /* Add transition for smooth hover effect */
 }
 
 .college-card:hover {
+position: relative;
   transform: scale(1.05); /* Add zoom-in effect on hover */
 }
 
@@ -39,181 +37,185 @@
 .college-image img {
   border-radius: 3%;
   width: 100%;
-  height: auto;
+  height: 180px;
 }
 
-.workshop-btn {
-  position: absolute; /* Set button position absolute */
-  bottom: 10px; /* Adjust button position from bottom */
-  right: 10px; /* Adjust button position from right */
-  /* background-color: rgb(68, 30, 86); */
-  /* color: wheat; */
-  padding: 10px 20px;
-  /* border: none; */
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Media query for responsiveness */
-@media screen and (max-width: 768px) {
-  .college-card {
-    width: 100%; /* Set card width to full width for smaller screens */
-  }
-}
 .workshop-btn {
   position: absolute;
-  bottom: 8px;
-  right: 8px;
-  /* background-color: rgb(39, 131, 11); */
-  color: rgb(39, 131, 11);
-  padding: 10px 20px;
-  /* border: none; */
-  border-color: #2ecc71;
-  
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(39, 131, 11);
+  color: #ffffff;
+  padding: 4px 6px;
   border-radius: 10px;
+  border-style: none;
   cursor: pointer;
   transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
 }
 
 .workshop-btn:hover {
-  /* background-color: orange;  */
-  background-color: rgb(39, 131, 11);
-    color:white;
+  background-color: rgb(226, 75, 15);
 }
 
-.view-more{
-  
-  /* background-color: rgb(39, 131, 11); */
+.view-more {
   color: rgb(39, 131, 11);
-  /* padding: 10px 20px; */
-  /* border: none; */
-  /* border-color: #2ecc71;
-  
-  border-radius: 10px;
+}
+
+.view-more:hover{
   cursor: pointer;
-  transition: background-color 0.3s ease; */
-
+  color:orange;
 }
-
-#no-workshops{
+#no-workshops {
   margin-top: 20px;
-    font-style: oblique;
-    color: #9a1a5a;
-    margin-bottom: 50px;
-    font-size: 40px;
-    text-align: center;
+  font-style: oblique;
+  color: #9a1a5a;
+  margin-bottom: 50px;
+  font-size: 40px;
+  text-align: center;
+}
+
+/* Media query for tablets */
+@media screen and (min-width: 768px) {
+  .college-card {
+    width: calc(50% - 10px); /* Adjust width to have two cards per row with margin between them */
+  }
+}
+
+/* Media query for desktops */
+@media screen and (min-width: 1200px) {
+  .college-card {
+    width: calc(33.33% - 10px); /* Adjust width to have three cards per row with margin between them */
+  }
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 480px) {
+  .college-card {
+    width: calc(100% - 10px); /* Adjust width to have one card per row with margin between them */
+  }
 }
 
   
-  .loading-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
-    text-align: center;
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
-    /* margin-top: 230px; */
-    font-weight: bold;
-    margin-bottom: 20px;
+.loading-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  text-align: center;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.workshop-btn-booknow{
+  background-color: rgb(39, 131, 11);
+    color: #ffffff;
+    padding: 4px 6px;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.workshop-btn-booknow:hover{
+  background-color: rgb(10, 31, 97);
+}
+
+.spinning-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.half-circle {
+  position: absolute;
+  width: 33.33%;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.half-circle-left {
+  left: 0;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.half-circle-middle {
+  left: 33.33%;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.half-circle-right {
+  left: 66.66%;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.half-circle-left,
+.half-circle-middle,
+.half-circle-right {
+  background-color: transparent;
+}
+
+.half-circle-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33.33%;
+  height: 100px;
+  background-color: #3498db; /* Change this to the desired color */
+  transform-origin: 100% 50%;
+  animation: spin-left 2s linear infinite;
+}
+
+.half-circle-middle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33.33%;
+  height: 100px;
+  background-color: #e74c3c; /* Change this to the desired color */
+  transform-origin: 0% 50%;
+  animation: spin-middle 2s linear infinite;
+}
+
+.half-circle-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33.33%;
+  height: 100px;
+  background-color: #2ecc71; /* Change this to the desired color */
+  transform-origin: 0% 50%;
+  animation: spin-right 2s linear infinite;
+}
+
+@keyframes spin-left {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .spinning-circle {
-    position: relative;
-    width: 100px;
-    height: 100px;
+  100% {
+    transform: rotate(120deg);
   }
-  
-  .half-circle {
-    position: absolute;
-    width: 33.33%;
-    height: 100px;
-    border-radius: 50%;
+}
+
+@keyframes spin-middle {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .half-circle-left {
-    left: 0;
-    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  100% {
+    transform: rotate(120deg);
   }
-  
-  .half-circle-middle {
-    left: 33.33%;
-    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+@keyframes spin-right {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .half-circle-right {
-    left: 66.66%;
-    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  100% {
+    transform: rotate(120deg);
   }
-  
-  .half-circle-left,
-  .half-circle-middle,
-  .half-circle-right {
-    background-color: transparent;
-  }
-  
-  .half-circle-left::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 33.33%;
-    height: 100px;
-    background-color: #3498db; /* Change this to the desired color */
-    transform-origin: 100% 50%;
-    animation: spin-left 2s linear infinite;
-  }
-  
-  .half-circle-middle::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 33.33%;
-    height: 100px;
-    background-color: #e74c3c; /* Change this to the desired color */
-    transform-origin: 0% 50%;
-    animation: spin-middle 2s linear infinite;
-  }
-  
-  .half-circle-right::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 33.33%;
-    height: 100px;
-    background-color: #2ecc71; /* Change this to the desired color */
-    transform-origin: 0% 50%;
-    animation: spin-right 2s linear infinite;
-  }
-  
-  @keyframes spin-left {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(120deg);
-    }
-  }
-  
-  @keyframes spin-middle {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(120deg);
-    }
-  }
-  
-  @keyframes spin-right {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(120deg);
-    }
-  }
-  
+}

@@ -84,6 +84,8 @@
     padding: 10px 20px;
     margin-right: 10px; /* Add margin between buttons */
     border: none;
+    background-color: green;
+    color:white;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;

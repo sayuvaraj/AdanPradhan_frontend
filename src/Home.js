@@ -57,12 +57,26 @@ const Home=() =>{
   </div>
       
     <div style={{marginLeft:'15px',padding:'30px'}}>
+    
        <strong><p style={{fontSize:'30px',marginLeft:'15px',color:'orangle'}}>Quick Read </p></strong>
       <hr style={{ width: '90%', borderTop: '2px solid #163046', margin: '10px 0' }} />
       <p id='para'style={{textSize:'40px'}}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque fugiat, minus culpa architecto, dignissimos iste voluptatum unde asperiores dolorum voluptatibus quisquam reiciendis consectetur quaerat reprehenderit veniam. Harum nobis voluptatum eum sed nulla? Aut rerum ad ratione fugit iure mollitia dicta sapiente exercitationem sed ex animi, explicabo nobis saepe dolores similique voluptatem est! Enim, accusantium quibusdam odio ut odit ullam distinctio!
            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate nemo sequi tenetur praesentium perferendis eos in minima eveniet ab sunt. Et repellat reprehenderit totam odio, 
       </p> 
    </div>
+   <h2 className='partner-heading' style={{color:'orangered'}}>Our Partners</h2>
+            <div className="partners">
+                {/* Insert partner logos */}
+               
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7CFA0oIO9tpahaU7MziuRc64W1E_ODYrAjODXr9rdH1UVxibkmoF5_JKJLZYVxI-92wY&usqp=CAU" alt="Partner 1" className="partner-logo" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBKqHOOJqX9bu1sA0oM6RZi3LbaCwv69PDByncPuop5xhpcS6Vx5GVdSM3zZMHJS55aos&usqp=CAU" alt="Partner 2" className="partner-logo" />
+                <img src="https://img.freepik.com/premium-vector/logo-university-name-logo-company-called-university_516670-732.jpg?size=626&ext=jpg&ga=GA1.1.2040923074.1711649224&semt=aishttps://i.ytimg.com/vi/SEmpCPFQIno/maxresdefault.jpg" alt="Partner 1" className="partner-logo" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt9YvhKHwQbneJVAs133oaDhsEXMpZ1eR1NUNhrmVFK4Ff3UDjISvmrR3s68GRtZQhkvg&usqp=CAUttps://i.pinimg.com/564x/ca/ec/35/caec35c2f1dd4264c5510341ea55165a.jpg" alt="Partner 2" className="partner-logo" />
+                {/* <img src="https://www.careerindia.com/college-logo/128x128/9/Keshav-Memorial-Institute-of-Technology-KMIT-Hyderabad.jpg" alt="Partner 2" className="partner-logo" /> */}
+                
+               
+                {/* Add more partner logos as needed */}
+            </div>
    <Faqs/>
    <Footer/>
    </>

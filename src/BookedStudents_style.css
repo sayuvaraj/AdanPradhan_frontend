@@ -22,6 +22,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
+  background-color: #1c0c3c;
 }
 
 /* Date item */
@@ -36,8 +37,7 @@
 }
 
 .date-item.selected {
-  background-color:#fff922; 
-  
+  background-color: #fff922; 
 }
 
 /* Details container */
@@ -69,17 +69,10 @@
   border: 1px solid #ccc;
   text-align: center;
 }
-.selected-data{
-  font-size:20px;
-  color:#9b1475;
-  text-align: center;
-}
+
 .bookings-table th {
   background-color: #1b7427;
-  
-  
-  color:white;
- 
+  color: white;
 }
 
 /* Button styling */
@@ -97,10 +90,16 @@
 .btn:hover {
   background-color: #0056b3;
 }
-.no-bookings-message{
-  text-align: center;
-  margin-top: 50px;
-  color:#1050ba;
-  font-size: 30px;
 
+.no-bookings-message {
+  text-align: center;
+  font-weight: 300;
+  margin-top: 50px;
+  color: red;
+  font-size: 17px;
+}
+
+/* Responsive table container */
+.table-container {
+  overflow-x: auto;
 }

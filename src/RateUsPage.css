@@ -1,11 +1,10 @@
+/* General styles */
 .rate-us-container-wrapper {
-   
     position: relative; /* Ensure relative positioning */
 }
 
 .rate-us-container {
-   
-    margin-bottom:50px;
+    margin-bottom: 50px;
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
@@ -22,6 +21,7 @@
 .rate-us-header {
     margin-bottom: 20px;
     animation: fadeIn 1s ease;
+    color: #0c5413; /* Header color */
 }
 
 .rating {
@@ -36,6 +36,7 @@
 }
 
 .star {
+    font-size: 30px; /* Adjust star size */
     transition: color 0.3s ease, transform 0.3s ease; /* Add transition for color and transform */
 }
 
@@ -58,7 +59,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(87, 228, 87);
+    background-color: #57e457; /* Thank you message background color */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -87,10 +88,8 @@
 
 .rating label {
     display: inline-block;
-    font-size: 50px;
     cursor: pointer;
     transition: transform 0.1s ease, color 0.3s ease;
-    transition: transform 0.1s ease, color 0.3s ease; /* Adjust transition duration */
 }
 
 .star:hover {
@@ -98,36 +97,30 @@
     color: #fdd835;
 }
 
-@keyframes zoom {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.2);
-    }
+/* Additional styles for the review section */
+.review-textarea {
+    width: 65%;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Allow vertical resizing */
+}
+.explore-workshops-btn{
+    padding:12px;
+    color:white;
+    background-color: green;
+   
+     border-radius:10px;
+     border-style: none;
+}
+.explore-workshops-btn:hover{
+    
+    background-color: orange;
+}
+.rating-description {
+    color: #0c5413; /* Description text color */
+    margin-bottom: 10px;
 }
 
-.thank-you-container {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.greeting {
-    font-size: 24px;
-    color: #0c5413;
-    animation: pulse 1s infinite alternate; /* Continuous pulse animation */
-}
-
-.message {
-    font-size: 16px;
-    color: rgb(233 85 166);;
-}
-
-@keyframes pulse {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
-    }
-}
+/* Footer styles */

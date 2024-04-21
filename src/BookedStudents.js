@@ -4,6 +4,7 @@ import ClgHeader from "./component/ClgHeader";
 import { useReactToPrint } from "react-to-print";
 import Footer from "./Footer";
 import LoadingAnimation from "./LoadingAnimation";
+import bookinglogo from './images/bookinglogo.png';
 
 const DateRow = ({ date, onClickDate, selected }) => {
   return (
@@ -12,14 +13,14 @@ const DateRow = ({ date, onClickDate, selected }) => {
         className={`date-item ${selected ? "selected" : ""}`}
         onClick={() => onClickDate(date)}
       >
-        <h2 className="selected-data">{date}</h2>
+        <h2 className="selected-data" style={{color:' #97116a',textAlign:'center'}}>{date}</h2>
       </div>
     </div>
   );
 };
 
 const NoBookingsMessage = () => {
-  return <div className="no-bookings-message">No bookings yet.</div>;
+  return <div className="no-bookings-message">No bookings yet !!</div>;
 };
 
 const TodayList = () => {
@@ -136,43 +137,46 @@ const TodayList = () => {
           ))}
         </div>
         {loading ? (
-          <LoadingAnimation /> // Render loading animation while loading is true
+          <LoadingAnimation />
         ) : (
           selectedDate && (
             <div className="details-container" ref={componentPDF}>
               <center>
-                {" "}
                 <h2>Details for {selectedDate}</h2>
               </center>
               {availableCourses.map((course) => (
                 <div key={`${selectedDate}-${course}`} className="course">
                   <center>
-                    <h3>{course}</h3>
+                    <h3>{course} <span><img src={bookinglogo}  width='100px' alt="booking logo"/></span></h3>
                   </center>
                   {filterBookingsByDateAndCourse(selectedDate, course)
                     .length > 0 ? (
-                    <table className="bookings-table">
-                      <thead>
-                        <tr>
-                          <th>Name</th>
-                          <th>Email</th>
-                          <th>contact No</th>
-                          <th>College Name</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {filterBookingsByDateAndCourse(selectedDate, course).map(
-                          (booking, index) => (
-                            <tr key={index}>
-                              <td>{booking.name}</td>
-                              <td>{booking.email}</td>
-                              <td>{booking.contactNo}</td>
-                              <td>{booking.collegeName}</td>
-                            </tr>
-                          )
-                        )}
-                      </tbody>
-                    </table>
+                    <div className="table-container">
+                      <table className="bookings-table">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>contact No</th>
+                            <th>College Name</th>
+                            <th>Slot Timings</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {filterBookingsByDateAndCourse(selectedDate, course).map(
+                            (booking, index) => (
+                              <tr key={index}>
+                                <td>{booking.name}</td>
+                                <td>{booking.email}</td>
+                                <td>{booking.contactNo}</td>
+                                <td>{booking.collegeName}</td>
+                                <td>{booking.slotTimings}</td>
+                              </tr>
+                            )
+                          )}
+                        </tbody>
+                      </table>
+                    </div>
                   ) : (
                     <NoBookingsMessage />
                   )}

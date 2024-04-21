@@ -99,7 +99,11 @@ const Profile = () => {
           <p>Email: {user.email}</p>
           <p>Contact No: {user.contactNo}</p>
           <p>College Name: {user.collegeName}</p>
-          <button className="profile-edit-button" onClick={() => setEditing(true)}>Edit Details</button>
+          <div style={{display:'flex',justifyContent:'center',marginTop:'40px'}}>
+          <button className="profile-edit-button profile-button" onClick={() => setEditing(true)}>Edit Details</button>
+       
+            </div>
+          {/* <button className="profile-edit-button" onClick={() => setEditing(true)}>Edit Details</button> */}
         </div>
       )}
       {editing && (
@@ -122,6 +126,7 @@ const Profile = () => {
               type="email"
               id="email"
               name="email"
+              readOnly
               value={formData.email}
               onChange={handleInputChange}
             />
@@ -148,9 +153,19 @@ const Profile = () => {
               onChange={handleInputChange}
             />
           </div>
+          <div style={{display:'flex',justifyContent:'space-evenly',marginTop:'50px'}}>
+            <div>
+            <button   className="profile-button profile-submit-button-style " type="submit">Update Profile</button>
+         
+            </div>
+            <div>
+            <button className="profile-button profile-cancel-button" type="button" onClick={() => setEditing(false)}>Cancel</button>
+       
+            </div>
+
+          </div>
           <button  id="profile-submit-button-style" className="profile-button " type="submit">Update Profile</button>
-          <button className="profile-button profile-cancel-button" type="button" onClick={() => setEditing(false)}>Cancel</button>
-        </form>
+          </form>
       )}
     </div>
     <section style={{marginTop:'50px'}}>
